@@ -1,0 +1,13 @@
+<ul id='pager' class="pagination">
+  <% if (page.count > 1) { %>
+    <% if (page.number) { %>
+      <li><a id='prev' href='/<%= page.number %>'>Prev</a></li>
+    <% } %>
+    <% if (page.number < page.count - 1) { %>
+      <% if (page.number) { %>
+         &nbsp;&nbsp;
+      <% } %>
+      <li><a id='next' href='/<%= page.number + 2 %>'>Next</a></li>
+    <% } %>
+  <% } %>
+</ul>

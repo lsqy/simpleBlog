@@ -1,0 +1,15 @@
+{
+  "name": "simpleBlog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "bootstrap": "^3.3.7",
+    "ejs": "*",
+    "express": "3.x",
+    "redis": "0.7.2"
+  }
+}

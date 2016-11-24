@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <%- include head %>
+  <body>
+    <% include menu %>
+
+    <% entries.forEach(function(entry) { %>
+      <div class='entry'>
+        <h3><%= entry.title %></h3>
+        <p><%= entry.body %></p>
+        <p>Posted by <%= entry.username %>-<%= entry.time %></p>
+      </div>
+    <% }) %>
+
+    <% include pager %>
+    <%- include footer %>
+  </body>
+</html>
