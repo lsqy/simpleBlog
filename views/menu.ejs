@@ -1,13 +1,45 @@
 <% if (locals.user) { %>
- <div id='menu'>
-    <span class='name'><%= user.name %></span>
-    <a href='/post'>post</a>
-    <a href='/logout'>logout</a>
-  </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+         <a class="navbar-brand name mypic" href="#">
+            <img alt="Brand" src="/img/avator.jpg">
+            <%= user.name %>
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+        <ul class="nav navbar-nav">
+          <li><a href='/post'>post</a></li>
+          <li><a href='/logout'>logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <% } else { %>
-  <div id='menu'>
-    <a href='/login'>login</a>
-    <a href='/register'>register</a>
-  </div>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand name" href="#">
+            请登录/注册
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li><a href='/login'>login</a></li>
+            <li><a href='/register'>register</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
 <% } %>
 

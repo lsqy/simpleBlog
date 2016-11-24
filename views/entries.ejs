@@ -3,13 +3,16 @@
   <%- include head %>
   <body>
     <% include menu %>
-
+    <%- include('components/jumbotron',{user: locals.user}) %>
     <% entries.forEach(function(entry) { %>
-      <div class='entry'>
-        <h3><%= entry.title %></h3>
+    <div class="panel panel-primary entry wobble animated">
+    <!-- Default panel contents -->
+      <div class="panel-heading"><%= entry.title %></div>
+      <div class="panel-body">
         <p><%= entry.body %></p>
-        <p>Posted by <%= entry.username %>-<%= entry.time %></p>
       </div>
+      <div class="panel-footer">Posted by <%= entry.username %>  - <%= entry.time %></div>
+    </div>
     <% }) %>
 
     <% include pager %>
