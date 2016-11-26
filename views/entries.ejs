@@ -2,20 +2,22 @@
 <html>
   <%- include head %>
   <body>
-    <% include menu %>
-    <%- include('components/jumbotron',{user: locals.user}) %>
-    <% entries.forEach(function(entry) { %>
-    <div class="panel panel-primary entry wobble animated">
-    <!-- Default panel contents -->
-      <div class="panel-heading"><%= entry.title %></div>
-      <div class="panel-body">
-        <p><%= entry.body %></p>
+    <div class="container">
+      <% include menu %>
+      <%- include('components/jumbotron',{user: locals.user}) %>
+      <% entries.forEach(function(entry) { %>
+      <div class="panel panel-primary entry wobble animated">
+      <!-- Default panel contents -->
+        <div class="panel-heading"><%= entry.title %></div>
+        <div class="panel-body">
+          <p><%= entry.body %></p>
+        </div>
+        <div class="panel-footer">Posted by <%= entry.username %>  - <%= entry.time %></div>
       </div>
-      <div class="panel-footer">Posted by <%= entry.username %>  - <%= entry.time %></div>
-    </div>
-    <% }) %>
+      <% }) %>
 
-    <% include pager %>
+      <% include pager %>
+    </div>
     <%- include footer %>
   </body>
 </html>

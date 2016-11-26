@@ -1,5 +1,4 @@
 body {
-    padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -8,6 +7,10 @@ a {
 }
 
 i {}
+
+p {
+    word-break: break-word; //使内容自动换行
+}
 
 #menu {
     position: absolute;
@@ -47,7 +50,7 @@ i {}
 .mgbot10 {
   margin-bottom: 10px;
 }
-.delay1; {
+.delay1 {
     animation-delay:1s;
 }
 

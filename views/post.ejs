@@ -2,24 +2,26 @@
 <html>
   <%- include head %>
   <body>
-    <% include menu %>
+    <div class="container">
+      <% include menu %>
 
-    <h1><%= title %></h1>
-    <p>Fill in the form below to add a new post.</p>
+      <h1><%= title %></h1>
+      <p>Fill in the form below to add a new post.</p>
 
-    <% include messages %>
+      <% include messages %>
 
-    <form action='/post' method='post'>
-      <p>
-        <input type='text' name='entry[title]' placeholder='Title' />
-      </p>
-      <p>
-        <textarea name='entry[body]' placeholder='Body'></textarea>
-      </p>
-      <p>
-        <input type='submit' value='Post' />
-      </p>
-    </form>
+      <form action='/post' method='post'>
+        <p>
+          <input type='text' name='entry[title]' placeholder='Title' />
+        </p>
+        <p>
+          <textarea name='entry[body]' placeholder='Body'></textarea>
+        </p>
+        <p>
+          <input type='submit' value='Post' />
+        </p>
+      </form>
+    </div>
     <%- include footer %>
   </body>
 </html>

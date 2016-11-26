@@ -2,43 +2,45 @@
 <html>
   <%- include head %>
   <body>
-    <% include menu %>
-    <h1><%= title %></h1>
-    <div class="alert alert-info alert-dismissible text-center" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <strong>注意!</strong> 填写下面的表单登录！
-    </div>
-
-    <% include messages %>
-
-    <form action='/login' method='post'>
-      <div class="form-group clearfix">
-        <label for="inputEmail3" class="col-sm-2 control-label text-center">用户名:</label>
-        <div class="col-sm-10">
-          <input type="text"  name='user[name]' id="inputEmail3" class="form-control" placeholder="Username">
-        </div>
+    <div class="container">
+      <% include menu %>
+      <h1><%= title %></h1>
+      <div class="alert alert-info alert-dismissible text-center" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <strong>注意!</strong> 填写下面的表单登录！
       </div>
-      <div class="form-group clearfix">
-        <label for="inputPassword3" class="col-sm-2 control-label text-center">密码:</label>
-        <div class="col-sm-10">
-          <input type="password"  name='user[pass]' id="inputPassword3" class="form-control" placeholder="Password">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
+
+      <% include messages %>
+
+      <form action='/login' method='post'>
+        <div class="form-group clearfix">
+          <label for="inputEmail3" class="col-sm-2 control-label text-center">用户名:</label>
+          <div class="col-sm-10">
+            <input type="text"  name='user[name]' id="inputEmail3" class="form-control" placeholder="Username">
           </div>
         </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Login</button>
+        <div class="form-group clearfix">
+          <label for="inputPassword3" class="col-sm-2 control-label text-center">密码:</label>
+          <div class="col-sm-10">
+            <input type="password"  name='user[pass]' id="inputPassword3" class="form-control" placeholder="Password">
+          </div>
         </div>
-      </div>
-    </form>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
     <%- include footer %>
   </body>
 </html>
